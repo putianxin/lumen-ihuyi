@@ -14,9 +14,8 @@ $ composer require "zhenggg/easy-ihuyi"
 
 # 配置
 
-**lumen 用户请手动复制config文件**
+**请在.env中加入以下配置信息**
 
-复制后修改 `config\ihuyi.php` 文件完善配置信息。
 ```PHP
 'APIID' => 'XXX',
 'APIKEY' => 'XXX',
