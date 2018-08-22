@@ -1,0 +1,38 @@
+{
+    "name": "ptx/lumen-ihuyi",
+    "description": "互亿无线SDK",
+    "keywords": [
+        "ihuyi",
+        "huyi",
+        "laravel",
+        "lumen"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/zhenggg/easy-ihuyi",
+    "authors": [
+        {
+            "name": "ptx",
+            "email": "putianxin@vip.qq.com",
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "php": ">=7.1",
+        "zhenggg/easy-ihuyi": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ptx\\Huyi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ptx\\HuyiServiceProvider"
+            ],
+            "aliases": {
+                "iHuyi": "Ptx\\Facades\\Huyi"
+            }
+        }
+    },
+}
