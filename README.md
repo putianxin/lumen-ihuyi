@@ -9,7 +9,7 @@
 # 安装
 
 ```shell
-$ composer require "zhenggg/easy-ihuyi"
+$ composer require ptx/lumen-ihuyi"
 ```
 
 # 配置
