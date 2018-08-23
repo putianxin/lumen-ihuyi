@@ -29,6 +29,7 @@ $ composer require ptx/lumen-ihuyi"
 
 //短信验证码/通知
 iHuyi::sms()->content($content)->send($phone_number);
+
 //语音验证码
 iHuyi::voice()->content($content)->send($phone_number);
 //国际短信

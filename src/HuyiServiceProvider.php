@@ -42,10 +42,22 @@ class HuyiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(dirname(__DIR__).'/config/ihuyi.php', 'pay');
-
-        $this->app->singleton('ihuyi.sms', function () {
-            return EasyHuyi::sms(config('ihuyi'));
+        $this->mergeConfigFrom(dirname(__DIR__).'/config/ihuyi.php', 'ihuyi');
+        $easyHuyi = new EasyHuyi(config('ihuyi'));
+        $this->app->singleton('ihuyi.sms', function () use($easyHuyi){
+            return $easyHuyi->sms();
+        });
+        $this->app->singleton('ihuyi.voice', function () use($easyHuyi){
+            return $easyHuyi->voice();
+        });
+        $this->app->singleton('ihuyi.isms', function () use($easyHuyi){
+            return $easyHuyi->isms();
+        });
+        $this->app->singleton('ihuyi.yxsms', function () use($easyHuyi){
+            return $easyHuyi->yxsms();
+        });
+        $this->app->singleton('ihuyi.mms', function () use($easyHuyi){
+            return $easyHuyi->mms();
         });
     }
 
