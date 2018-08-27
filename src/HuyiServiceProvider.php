@@ -43,7 +43,7 @@ class HuyiServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(dirname(__DIR__).'/config/ihuyi.php', 'ihuyi');
-        $easyHuyi = new EasyHuyi(config('ihuyi'));
+        $easyHuyi = new EasyHuyi(app('config')->get('ihuyi'));
         $this->app->singleton('ihuyi.sms', function () use($easyHuyi){
             return $easyHuyi->sms();
         });
