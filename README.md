@@ -2,26 +2,26 @@
 
 <p>:calling: 互亿无线 composer package.</p>
 
-# Requirement
+## Requirement
 
 - PHP >= 7.1
 
-# 安装
+## 安装
 
 ```shell
 $ composer require ptx/lumen-ihuyi"
 ```
 
-# 配置
+## 配置
 
-**请在.env中加入以下配置信息**
+**请在.env中加入以下配置信息或移动并修改config中的文件**
 
 ```PHP
-'APIID' => 'XXX',
-'APIKEY' => 'XXX',
+'HUYI_APP_ID' => 'XXX',
+'HUYI_API_KEY' => 'XXX',
 ```
 
-# Usage
+## Usage
 
 ```php
 
@@ -41,6 +41,6 @@ iHuyi::yxsms()->content($content)->stime($time)->send($phone_number);
 //彩信营销
 iHuyi::mms()->mmsid($mmsid)->pid($pid)->send($phone_number);
 ```
-# License
+## License
 
 MIT
