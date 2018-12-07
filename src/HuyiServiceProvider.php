@@ -26,7 +26,7 @@ class HuyiServiceProvider extends ServiceProvider
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([
                 dirname(__DIR__).'/config/ihuyi.php' => config_path('ihuyi.php'), ],
-                'laravel-sms'
+                'ihuyi'
             );
         } elseif ($this->app instanceof LumenApplication) {
             $this->app->configure('ihuyi');
