@@ -28,7 +28,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ptx\\HuyiServiceProvider"
+                "Ptx\\Huyi\\HuyiServiceProvider"
             ],
             "aliases": {
                 "iHuyi": "Ptx\\Facades\\Huyi"
