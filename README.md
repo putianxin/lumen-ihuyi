@@ -21,6 +21,18 @@ $ composer require ptx/lumen-ihuyi"
 'HUYI_API_KEY' => 'XXX',
 ```
 
+注册服务
+
+lumen:
+
+$app->register(\Ptx\Huyi\HuyiServiceProvider::class);
+
+laravel:
+
+ServiceProvider:
+
+\Ptx\Huyi\HuyiServiceProvider::class
+
 ## Usage
 
 ```php
