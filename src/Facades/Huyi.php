@@ -63,6 +63,6 @@ class Huyi extends Facade
      */
     public static function yxsms()
     {
-        return app('iHuyi.yxsms');
+        return app('ihuyi.yxsms');
     }
 }
