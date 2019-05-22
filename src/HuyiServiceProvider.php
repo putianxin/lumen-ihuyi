@@ -43,20 +43,25 @@ class HuyiServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(dirname(__DIR__).'/config/ihuyi.php', 'ihuyi');
-        $easyHuyi = new EasyHuyi(app('config')->get('ihuyi'));
-        $this->app->singleton('ihuyi.sms', function () use($easyHuyi){
+
+        $this->app->singleton('ihuyi.sms', function (){
+            $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.sms'));
             return $easyHuyi->sms();
         });
-        $this->app->singleton('ihuyi.voice', function () use($easyHuyi){
+        $this->app->singleton('ihuyi.voice', function (){
+            $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.voice'));
             return $easyHuyi->voice();
         });
-        $this->app->singleton('ihuyi.isms', function () use($easyHuyi){
+        $this->app->singleton('ihuyi.isms', function (){
+            $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.isms'));
             return $easyHuyi->isms();
         });
-        $this->app->singleton('ihuyi.yxsms', function () use($easyHuyi){
+        $this->app->singleton('ihuyi.yxsms', function (){
+            $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.yxsms'));
             return $easyHuyi->yxsms();
         });
-        $this->app->singleton('ihuyi.mms', function () use($easyHuyi){
+        $this->app->singleton('ihuyi.mms', function (){
+            $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.mms'));
             return $easyHuyi->mms();
         });
     }
