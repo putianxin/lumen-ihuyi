@@ -58,7 +58,7 @@ class HuyiServiceProvider extends ServiceProvider
         });
         $this->app->singleton('ihuyi.yxsms', function (){
             $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.yxsms'));
-            return $easyHuyi->yxsms();
+            return $easyHuyi->yxSms();
         });
         $this->app->singleton('ihuyi.mms', function (){
             $easyHuyi = new EasyHuyi(app('config')->get('ihuyi.mms'));
